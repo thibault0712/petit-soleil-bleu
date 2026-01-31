@@ -1,0 +1,5 @@
+name = "petit-ciel-bleu"
+compatibility_date = "2026-01-31"
+
+[site]
+bucket = "."
