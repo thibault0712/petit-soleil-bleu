@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+p, h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .about-content {
     display: flex;
     gap: 46px;

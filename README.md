@@ -1,8 +1,10 @@
-# Petit ciel bleu (site météo)
-Petit ciel bleu est un simple site météo responsive developpé en html/css/JS pur, la récupération des informations météos sont récupérés par l'API Open-Weather-Map.
+# Petit soleil bleu (site météo)
+Petit soleil bleu est un simple site météo responsive developpé en html/css/JS pur, la récupération des informations météos sont récupérés par l'API Open-Weather-Map.
 
 ## Visiter le site
-Le site est accessible à l'url : ?
+Le site est accessible à l'url : https://petit-soleil-bleu.thibaultfalezan.com
+
+***Note : Il y a des légères différences avec le site rendu en code source***
 
 ## Installation
 Pour déployer le site internet en local vous devez dans un premier temps récupérer une clef API Open weather map, une fois cela fait vous devez la coller dans le config.js. 

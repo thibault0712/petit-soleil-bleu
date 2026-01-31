@@ -5,7 +5,45 @@
     <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+
+    <title>Petit soleil bleu - Prévisions Météo Gratuites</title>
+    <meta name="description" content="Consultez les prévisions météo en temps réel sur Petit soleil bleu. Une interface simple et propre pour suivre le temps qu'il fait dans votre ville.">
+    <meta name="keywords" content="météo, prévisions, climat, Petit soleil bleu, météo Vannes, météo France">
+    <meta name="author" content="Thibault Falézan">
+    <link rel="canonical" href="https://petit-soleil-bleu.thibaultfalezan.com/src/home/home.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://petit-soleil-bleu.thibaultfalezan.com/src/home/home.html">
+    <meta property="og:title" content="Petit soleil bleu - Prévisions Météo">
+    <meta property="og:description" content="Votre météo quotidienne avec un design épuré.">
+    <meta property="og:image" content="https://petit-soleil-bleu.thibaultfalezan.com/assets/icons/android-chrome-512x512.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Petit soleil bleu",
+      "url": "https://petit-soleil-bleu.thibaultfalezan.com",
+      "description": "Une application météo responsive simple et propre.",
+      "applicationCategory": "WeatherApplication",
+      "operatingSystem": "All",
+      "author": {
+        "@type": "Person",
+        "name": "Thibault Falézan",
+        "url": "https://thibaultfalezan.com"
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../assets/icons/android-chrome-512x512.png">
+
     <script type="text/javascript" src="api/getWeather.js"></script>
     <script type="text/javascript" src="../../config.js"></script>
     <script type="text/javascript" src="views/updatePage.js"></script>
@@ -15,6 +53,7 @@
 <header>
     <nav class="navbar">
         <a class="active" href="../home/home.html">Accueil</a>
+        <a href="mailto:thibaultfalezan@gmail.com">Contact</a>
         <a href="../about/about.html">À propos</a>
     </nav>
 
@@ -36,7 +75,7 @@
                     <div class="weather-card-header-information">
                         <p class="weather-card-header-temperature" id="header-temperature"> ? </p>
                             <div class="weather-card-header-icon-container">
-                                <img id="weather-icon" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt=""/>
+                                <img id="weather-icon" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt="Icône météo actuelle"/>
                             </div>
                             <div class="weather-card-header-stats">
                                 <div>
@@ -56,7 +95,7 @@
                         <p id="content-day-1" class="day">
                             Ven
                         </p>
-                        <img id="weather-icon-1" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt=""/>
+                        <img id="weather-icon-1" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt="Météo jour 1"/>
                         <p id="content-temp-1" class="temp">
                             ?
                         </p>
@@ -65,7 +104,7 @@
                         <p id="content-day-2" class="day">
                             Ven
                         </p>
-                        <img id="weather-icon-2" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt=""/>
+                        <img id="weather-icon-2" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt="Météo jour 2"/>
                         <p id="content-temp-2" class="temp">
                             ?
                         </p>
@@ -74,7 +113,7 @@
                         <p id="content-day-3" class="day">
                             Ven
                         </p>
-                        <img id="weather-icon-3" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt=""/>
+                        <img id="weather-icon-3" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt="Météo jour 3"/>
                         <p id="content-temp-3" class="temp">
                             ?
                         </p>
@@ -83,7 +122,7 @@
                         <p id="content-day-4" class="day">
                             Ven
                         </p>
-                        <img id="weather-icon-4" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt=""/>
+                        <img id="weather-icon-4" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt="Météo jour 4"/>
                         <p id="content-temp-4" class="temp">
                             ?
                         </p>
@@ -92,7 +131,7 @@
                         <p id="content-day-5" class="day">
                             Ven
                         </p>
-                        <img id="weather-icon-5" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt=""/>
+                        <img id="weather-icon-5" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt="Météo jour 5"/>
                         <p id="content-temp-5" class="temp">
                             ?
                         </p>

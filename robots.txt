@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /assets/icons/cloud-not-found.png
+Disallow: /assets/icons/searchIcon.svg
+Disallow: /assets/img/profilePicture.jpeg
+Allow: /
+
+Sitemap: https://petit-soleil-bleu.thibaultfalezan.com/sitemap.xml

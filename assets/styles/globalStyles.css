@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     margin: 0;
     display: flex;
@@ -53,7 +55,6 @@ header, footer {
 
 p, h1, h2, h3, h4, h5, h6 {
     font-family: "Comic Relief", system-ui;
-    font-style: normal;
 }
 
 @media screen and (max-width: 800px) {
