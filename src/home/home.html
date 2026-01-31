@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../../assets/styles/globalStyles.css">
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <script type="text/javascript" src="api/getWeather.js"></script>
+    <script type="text/javascript" src="../../config.js"></script>
+    <script type="text/javascript" src="views/updatePage.js"></script>
+    <script type="text/javascript" src="events/onEnterListener.js" defer></script>
+    <script type="text/javascript" src="events/onLoad.js" defer></script>
+</head>
+<header>
+    <nav class="navbar">
+        <a class="active" href="../home/home.html">Accueil</a>
+        <a href="../about/about.html">À propos</a>
+    </nav>
+
+    <div class="searchBar">
+        <input type="search" id="input-town" name="q" value="Vannes" placeholder="Rechercher une ville" />
+        <button onclick='updatePage();'>Chercher</button>
+    </div>
+</header>
+<body>
+
+    <section class="content">
+            <div class="weather-card">
+                <div class="weather-card-header">
+                    <div class="weather-card-header-title">
+                        <h1 class="weather-card-header-title-text" id="header-day">
+                            Vendredi
+                        </h1>
+                    </div>
+                    <div class="weather-card-header-information">
+                        <p class="weather-card-header-temperature" id="header-temperature"> ? </p>
+                            <div class="weather-card-header-icon-container">
+                                <img id="weather-icon" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt=""/>
+                            </div>
+                            <div class="weather-card-header-stats">
+                                <div>
+                                    <p id="header-humidity">
+                                        Humidité : ?%
+                                    </p>
+                                    <p id="header-wind">
+                                        Vent : ?km/h
+                                    </p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <hr class="horizontal-divider">
+                <div class="weather-card-content">
+                    <div onclick="changeWeatherCardHeader(0)" class="weather-card-content-day">
+                        <p id="content-day-1" class="day">
+                            Ven
+                        </p>
+                        <img id="weather-icon-1" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt=""/>
+                        <p id="content-temp-1" class="temp">
+                            ?
+                        </p>
+                    </div>
+                    <div onclick="changeWeatherCardHeader(1)" class="weather-card-content-day">
+                        <p id="content-day-2" class="day">
+                            Ven
+                        </p>
+                        <img id="weather-icon-2" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt=""/>
+                        <p id="content-temp-2" class="temp">
+                            ?
+                        </p>
+                    </div>
+                    <div onclick="changeWeatherCardHeader(2)" class="weather-card-content-day">
+                        <p id="content-day-3" class="day">
+                            Ven
+                        </p>
+                        <img id="weather-icon-3" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt=""/>
+                        <p id="content-temp-3" class="temp">
+                            ?
+                        </p>
+                    </div>
+                    <div onclick="changeWeatherCardHeader(3)" class="weather-card-content-day">
+                        <p id="content-day-4" class="day">
+                            Ven
+                        </p>
+                        <img id="weather-icon-4" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt=""/>
+                        <p id="content-temp-4" class="temp">
+                            ?
+                        </p>
+                    </div>
+                    <div onclick="changeWeatherCardHeader(4)" class="weather-card-content-day">
+                        <p id="content-day-5" class="day">
+                            Ven
+                        </p>
+                        <img id="weather-icon-5" class="weather-icon" src="../../assets/icons/cloud-not-found.png" alt=""/>
+                        <p id="content-temp-5" class="temp">
+                            ?
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+</body>
+
+<footer>
+    <p class="footer-text">
+        Copyright © 2026 T.Falézan
+    </p>
+</footer>
+</html>

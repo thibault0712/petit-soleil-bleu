@@ -1,0 +1,83 @@
+.content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    gap: 46px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.content .picture-content {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.content .picture-content img {
+    object-fit: cover;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.content .text-container {
+    grid-column: 2;
+}
+
+.content .text-container .paragraph {
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+.content .text-container {
+    flex: 1 1 400px;
+    text-align: left;
+}
+
+@media screen and (max-width: 650px) {
+    .about-content {
+        flex-wrap: wrap-reverse;
+        padding: 0 20px;
+    }
+}
+
+.social-button {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.social-button a:hover{
+    background-color: #98bcf5;
+    color: black;
+}
+
+.social-button a {
+    text-align: center;
+    padding: 8px 16px;
+    border: #000000 solid 1px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+    filter: drop-shadow(6px 8px #000000);
+    cursor: pointer;
+    font-family: "Comic Relief", system-ui;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.profilePicture {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border: #000000 solid 1px;
+    color: #000000;
+    filter: drop-shadow(6px 8px #000000);
+}
