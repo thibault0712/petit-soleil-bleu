@@ -1,0 +1,1 @@
+$('#btn-search').on('click', updatePage);

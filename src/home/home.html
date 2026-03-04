@@ -49,6 +49,8 @@
     <script type="text/javascript" src="views/updatePage.js"></script>
     <script type="text/javascript" src="events/onEnterListener.js" defer></script>
     <script type="text/javascript" src="events/onLoad.js" defer></script>
+    <script type="text/javascript" src="events/onSearchBtnClick.js" defer></script>
+    <script type="text/javascript" src="events/onWeatherCardClick.js" defer></script>
 </head>
 <body class="d-flex flex-column min-vh-100 container">
 
@@ -61,7 +63,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6 d-flex gap-2">
             <input type="search" class="form-control form-control-md" id="input-town" name="q" value="Vannes" placeholder="Rechercher une ville" />
-            <button class="btn btn-primary btn-lg px-4" onclick='updatePage();'>Chercher</button>
+            <button id="btn-search" class="btn btn-primary btn-lg px-4">Chercher</button>
         </div>
     </div>
 </header>
@@ -99,7 +101,7 @@
                     <hr class="my-4">
 
                     <div class="row g-2 justify-content-around">
-                        <div onclick="changeWeatherCardHeader(0)" class="col text-center cursor-pointer p-2 rounded hover-bg-light">
+                        <div data-id="0" class="col text-center cursor-pointer p-2 rounded hover-bg-light weather-card">
                             <p id="content-day-1" class="fw-bold mb-1">
                                 Ven
                             </p>
@@ -108,7 +110,7 @@
                                 ?
                             </p>
                         </div>
-                        <div onclick="changeWeatherCardHeader(1)" class="col text-center cursor-pointer p-2 rounded hover-bg-light">
+                        <div data-id="1" class="col text-center cursor-pointer p-2 rounded hover-bg-light weather-card">
                             <p id="content-day-2" class="fw-bold mb-1">
                                 Ven
                             </p>
@@ -117,7 +119,7 @@
                                 ?
                             </p>
                         </div>
-                        <div onclick="changeWeatherCardHeader(2)" class="col text-center cursor-pointer p-2 rounded hover-bg-light">
+                        <div data-id="2" class="col text-center cursor-pointer p-2 rounded hover-bg-light weather-card">
                             <p id="content-day-3" class="fw-bold mb-1">
                                 Ven
                             </p>
@@ -126,7 +128,7 @@
                                 ?
                             </p>
                         </div>
-                        <div onclick="changeWeatherCardHeader(3)" class="col text-center cursor-pointer p-2 rounded hover-bg-light">
+                        <div data-id="3" class="col text-center cursor-pointer p-2 rounded hover-bg-light weather-card">
                             <p id="content-day-4" class="fw-bold mb-1">
                                 Ven
                             </p>
@@ -135,7 +137,7 @@
                                 ?
                             </p>
                         </div>
-                        <div onclick="changeWeatherCardHeader(4)" class="col text-center cursor-pointer p-2 rounded hover-bg-light">
+                        <div data-id="4" class="col text-center cursor-pointer p-2 rounded hover-bg-light weather-card">
                             <p id="content-day-5" class="fw-bold mb-1">
                                 Ven
                             </p>
