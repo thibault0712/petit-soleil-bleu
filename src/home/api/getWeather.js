@@ -1,6 +1,7 @@
 
 
 async function fetchData(town, dataToGet) {
+
     let url = null;
 
     switch (dataToGet) {
@@ -14,18 +15,9 @@ async function fetchData(town, dataToGet) {
             throw new Error("Unknown data " + dataToGet);
     }
 
-    let result = null;
-
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Response status: ${response.status}`);
-        }
-
-        result = await response.json();
-    } catch (error) {
-        console.error(error.message);
-    }
+    const result = await $.get(url)
+        .done(data => data)
+        .catch(() => null);
 
     return result;
 }
@@ -41,7 +33,6 @@ async function getDataNextDays(town) {
 
         for (let i = 1; i < 5; i++) {
             date.setDate(date.getDate() + 1);
-            console.log(weatherList[i]);
 
             const formatedDate = date.toISOString().split('T')[0] + " " + date.toTimeString().split(' ')[0].replace(/:/g, ':');
             const weather = weatherList.find(potentialWeather => potentialWeather.dt_txt === formatedDate);

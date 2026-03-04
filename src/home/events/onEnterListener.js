@@ -1,6 +1,6 @@
 const inputTown = document.getElementById('input-town');
 
-inputTown?.addEventListener('keydown', (event) => {
+$('#input-town').on('keypress', (event) => {
     if (event.key === 'Enter') {
         updatePage()
     }

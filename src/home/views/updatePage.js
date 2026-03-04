@@ -3,7 +3,7 @@ const MINIMIZE_DAY_LIST = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"]
 let globalWeatherList = []
 
 async function updatePage() {
-    const town = document.getElementById('input-town').value;
+    const town = $('#input-town').val();
     globalWeatherList = [];
     globalWeatherList.push(await getDataToday(town));
     globalWeatherList.push(...await getDataNextDays(town));
@@ -18,17 +18,18 @@ function updateWeatherCardList() {
         const weatherData = globalWeatherList[i];
         const elementID = i + 1;
 
-        document.getElementById("content-day-" + elementID).innerHTML = MINIMIZE_DAY_LIST[weatherData.date];
-        document.getElementById("content-temp-" + elementID).innerHTML = weatherData.temp;
-        document.getElementById('weather-icon-' + elementID).src = weatherData.imageSrc;
+
+        $("#content-day-" + elementID).html(MINIMIZE_DAY_LIST[weatherData.date]);
+        $("#content-temp-" + elementID).html(weatherData.temp);
+        $('#weather-icon-' + elementID).attr("src", weatherData.imageSrc);
 
     }
 }
 
 function changeWeatherCardHeader(weatherListID) {
-    document.getElementById('header-day').innerText = DAY_LIST[globalWeatherList[weatherListID].date];
-    document.getElementById('header-wind').innerText = "Vent : " + globalWeatherList[weatherListID].wind;
-    document.getElementById('header-humidity').innerText = "Humidité : " + globalWeatherList[weatherListID].humidity;
-    document.getElementById('header-temperature').innerText = globalWeatherList[weatherListID].temp;
-    document.getElementById('weather-icon').src = globalWeatherList[weatherListID].imageSrc;
+    $('#header-day').html(DAY_LIST[globalWeatherList[weatherListID].date]);
+    $('#header-wind').html("Vent : " + globalWeatherList[weatherListID].wind);
+    $('#header-humidity').html("Humidité : " + globalWeatherList[weatherListID].humidity);
+    $('#header-temperature').html(globalWeatherList[weatherListID].temp);
+    $('#weather-icon').attr("src", globalWeatherList[weatherListID].imageSrc);
 }
